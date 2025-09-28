@@ -1,3 +1,8 @@
+@media (max-width: 768px) {
+  .content-wrap {
+    padding-top: calc(var(--nav-height) + 20px);
+  }
+}
 
 :root{
   --radius: 1rem;
@@ -23,3 +28,4 @@ body{ letter-spacing:.2px; }
 
 /* Avatar del hero (solo mejoras visuales; la imagen se define en HTML con <img>) */
 .hero-avatar{ object-fit: cover; }
+
