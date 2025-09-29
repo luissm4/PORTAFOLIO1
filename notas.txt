@@ -1,0 +1,44 @@
+
+        <!-- Card 2 -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <article class="card h-100 bg-dark border-secondary-subtle shadow-sm">
+            <img class="card-img-top" src="https://picsum.photos/640/360?random=102" alt="Preview proyecto 2">
+            <div class="card-body d-flex flex-column">
+              <h3 class="h5 card-title mb-2">Landing para Startup</h3>
+              <p class="card-text text-secondary">SEO técnico y métricas Core Web Vitals por encima de 90.</p>
+              <div class="mt-auto d-flex gap-2">
+                <a class="btn btn-primary btn-sm" href="#" target="_blank" rel="noopener">Ver demo</a>
+                <a class="btn btn-outline-light btn-sm" href="https://github.com/luissm4" target="_blank" rel="noopener">Código</a>
+              </div>
+            </div>
+          </article>
+        </div>
+        <!-- Card 3 -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <article class="card h-100 bg-dark border-secondary-subtle shadow-sm">
+            <img class="card-img-top" src="https://picsum.photos/640/360?random=103" alt="Preview proyecto 3">
+            <div class="card-body d-flex flex-column">
+              <h3 class="h5 card-title mb-2">Dashboard analítico</h3>
+              <p class="card-text text-secondary">Gráficas, autenticación y API REST. Diseño limpio y dark mode.</p>
+              <div class="mt-auto d-flex gap-2">
+                <a class="btn btn-primary btn-sm" href="#" target="_blank" rel="noopener">Ver demo</a>
+                <a class="btn btn-outline-light btn-sm" href="https://github.com/luissm4" target="_blank" rel="noopener">Código</a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+
+            <div class="row g-4">
+      <div class="col-12 col-md-6 col-lg-4">
+        <article class="card bg-surface h-100 shadow-sm">
+          <img class="card-img-top" src="img/sb/sb.png" alt="SB Equipment Topografía - preview">
+          <div class="card-body d-flex flex-column">
+            <h3 class="h5 card-title">SB Equipment Topografía</h3>
+            <p class="card-text text-muted">Información sobre proyectos, servicios y contacto.</p>
+            <div class="mt-auto"><small>↻ 𝙇𝙤𝙖𝙙𝙞𝙣𝙜... <strong class="text-muted">En proceso</strong></small></div>
+          </div>
+        </article>
+      </div>
+      <!-- Agrega más cards aquí o enlaza a proyectos.html -->
+    </div>

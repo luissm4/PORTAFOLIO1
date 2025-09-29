@@ -1,0 +1,90 @@
+/* ===== Paleta de marca (ajústala a tu gusto) ===== */
+:root {
+  --brand-bg: #0e1116;          /* fondo principal */
+  --brand-surface: #141a22;     /* superficies (cards/nav) */
+  --brand-text: #eaeef2;        /* texto principal */
+  --brand-muted: #9aa6b2;       /* texto secundario */
+  --brand-primary: #4db8ff;     /* acento */
+  --brand-primary-contrast: #001421;
+
+  /* Overwrite Bootstrap CSS variables (modo oscuro propio) */
+  --bs-body-bg: var(--brand-bg);
+  --bs-body-color: var(--brand-text);
+  --bs-emphasis-color: #fff;
+  --bs-secondary-color: var(--brand-muted);
+  --bs-link-color: var(--brand-primary);
+  --bs-link-hover-color: #2b9be6;
+  --bs-border-color: #243242;
+  --bs-primary: var(--brand-primary);
+}
+
+/* ===== Base ===== */
+html, body {
+  background-color: var(--brand-bg);
+  color: var(--brand-text);
+}
+
+.section-pad {
+  padding: 4rem 0;
+}
+
+.text-muted { color: var(--brand-muted) !important; }
+
+/* ===== Navbar ===== */
+.navbar {
+  background: var(--brand-surface) !important;
+  border-bottom: 1px solid var(--bs-border-color);
+}
+
+.navbar-brand strong { color: #fff; }
+.navbar .nav-link {
+  color: var(--brand-text);
+  opacity: .85;
+}
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+  opacity: 1;
+  color: var(--brand-primary);
+}
+
+/* ===== Hero ===== */
+.hero {
+  background: linear-gradient(180deg, rgba(77,184,255,.08), transparent 60%);
+  border-bottom: 1px solid var(--bs-border-color);
+}
+
+/* ===== Cards ===== */
+.card.bg-surface {
+  background: var(--brand-surface);
+  border-color: var(--bs-border-color);
+}
+
+/* ===== Botones (usando clases de Bootstrap) ===== */
+.btn-primary {
+  --bs-btn-bg: var(--brand-primary);
+  --bs-btn-border-color: var(--brand-primary);
+  --bs-btn-hover-bg: #2b9be6;
+  --bs-btn-hover-border-color: #2b9be6;
+  --bs-btn-color: var(--brand-primary-contrast);
+}
+
+.btn-outline-light {
+  --bs-btn-color: var(--brand-text);
+  --bs-btn-border-color: var(--brand-text);
+  --bs-btn-hover-bg: var(--brand-text);
+  --bs-btn-hover-color: #000;
+}
+
+/* ===== Imágenes ===== */
+.img-soft {
+  border-radius: 10px;
+  border: 1px solid var(--bs-border-color);
+}
+
+/* ===== Footer ===== */
+.site-footer {
+  background: var(--brand-surface);
+  border-top: 1px solid var(--bs-border-color);
+}
+
+
