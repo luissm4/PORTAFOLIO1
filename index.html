@@ -1,55 +1,45 @@
 <!DOCTYPE html>
 <html lang="es" data-bs-theme="dark">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>LM CodeCraft — Portafolio</title>
-
-  <!-- Bootstrap 5.3.3 CSS -->
+  <link rel="icon" type="image/png" href="img/logos/LM.png">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-
-  <!-- Tu CSS de marca -->
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
 
-  <!-- NAVBAR (JS colapsable en móvil) -->
+<body>
   <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
     <div class="container">
+
       <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
-        <span class="rounded-3" style="width:10px;height:10px;background:#4db8ff;display:inline-block;"></span>
+        <img src="img/logos/LM.png" alt="LM Logo" class="brand-logo" width="50" height="50">
         <strong>LM CodeCraft</strong>
         <span class="text-muted">/ Desarrollador Web</span>
       </a>
 
-      <!-- botón hamburguesa -->
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
-              aria-controls="mainNav" aria-expanded="false" aria-label="Menú">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Menú">
         <span class="navbar-toggler-icon"></span>
       </button>
 
       <div id="mainNav" class="collapse navbar-collapse">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item"><a class="nav-link active" href="index.html">Inicio</a></li>
-          <li class="nav-item"><a class="nav-link" href="proyectos.html">Proyectos</a></li>
           <li class="nav-item"><a class="nav-link" href="sobre-mi.html">Sobre mí</a></li>
           <li class="nav-item"><a class="nav-link" href="servicios.html">Servicios</a></li>
-          <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
         </ul>
       </div>
     </div>
   </nav>
 
-  <!-- HERO -->
   <header class="hero">
     <div class="container section-pad">
       <div class="row align-items-center gy-4">
         <div class="col-lg-7">
           <h1 class="display-5 fw-bold mb-3">Tu visión, mi código: hago realidad tu proyecto web.</h1>
-          <p class="lead text-muted mb-4">
-            Soy <strong>Luis</strong>, desarrollador web con enfoque en interfaces limpias, rendimiento y buenas prácticas.
-          </p>
-
+          <p class="lead text-muted mb-4">Soy <strong>Luis</strong>, desarrollador web especializado en crear sitios rápidos, funcionales y visualmente atractivos. Transformo ideas en experiencias digitales que conectan con las personas.</p>
           <div class="mb-4">
             <span class="badge text-bg-primary me-1">HTML</span>
             <span class="badge text-bg-primary me-1">CSS</span>
@@ -57,35 +47,24 @@
             <span class="badge text-bg-primary me-1">Python</span>
             <span class="badge text-bg-primary">Django</span>
           </div>
-
-          <div class="d-flex gap-2">
-            <a class="btn btn-outline-light btn-lg" href="contacto.html">Ven Hablemos</a>
-            <a class="btn btn-outline-light btn-lg" href="https://github.com/luissm4" target="_blank" rel="noopener">Ver GitHub</a>
-            <a class="btn btn-outline-light btn-lg" href="proyectos.html">Ver Proyectos</a>
+          <div class="btn-group btn-group-lg">
+            <a class="btn btn-light btn-lg" href="contacto.html">Ven Hablemos</a>
+            <a class="btn btn-light btn-lg" href="proyectos.html">Ver Proyectos</a>
           </div>
         </div>
-
         <div class="col-lg-5">
-          <img src="img/p1/p1.jpeg" class="img-fluid rounded-3" alt="code">
+          <img src="img/logos/LMCC.jpg" class="img-fluid rounded-3" alt="code">
         </div>
       </div>
     </div>
   </header>
 
-  <!-- FOOTER -->
-  <footer class="site-footer py-4 mt-5">
-    <div class="text-center ">
-      <small class="text-muted">© <span id="year"></span> Derechos reservados.</small>
+  <footer class="site-footer py-4">
+    <div class="container text-center">
+      <small class="text-muted">© 2025 Derechos reservados.</small>
     </div>
   </footer>
 
-  <!-- Bootstrap 5.3.3 JS (incluye Popper para menús) -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
-  <!-- JS opcional: año dinámico -->
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
 </body>
 </html>
-
