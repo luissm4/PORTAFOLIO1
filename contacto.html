@@ -1,51 +1,65 @@
 <!DOCTYPE html>
-<html lang="es" data-bs-theme="dark">
+<html lang="es">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Contacto — LM CodeCraft</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>LM CodeCraft — Contacto</title>
   <link rel="icon" type="image/png" href="img/logos/LM.png">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style/style.css">
 </head>
 <body>
+  <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
     <div class="container">
-      
       <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
-        <img src="img/logos/LM.png" alt="LM Logo" class="brand-logo" width="50" height="50">
-        <strong>LM CodeCraft</strong>
+        <img src="img/logos/LM.png" alt="LM" width="28" height="28" class="rounded"> LM CodeCraft
       </a>
-
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
         <span class="navbar-toggler-icon"></span>
       </button>
-
       <div id="nav" class="collapse navbar-collapse">
         <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
-          <li class="nav-item"><a class="nav-link" href="sobre-mi.html">Sobre mí</a></li>
-          <li class="nav-item"><a class="nav-link" href="servicios.html">Servicios</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html">Volver</a></li>
         </ul>
       </div>
     </div>
   </nav>
 
-  <main class="container section-pad text-center">
-    <h1 class="mb-4">Contacto</h1>
-    <p class="lead text-muted">Puedes comunicarte directamente conmigo:</p>
-    <div class="d-flex flex-column align-items-center gap-3">
-      <a href="https://www.instagram.com/lm_codecraft?igsh=MWN2MnhzeWh6NnI1Mw%3D%3D&utm_source=qr " target="_blank" class="btn btn-primary btn-lg">Instagram</a>
-    </div>
-  </main>
+  <!-- Contacto -->
+  <section id="contacto">
+    <div class="container">
+      <h2 class="section-title">📞 Contacto</h2>
+      <p class="text-center lead mb-5">¿Listo para llevar tu proyecto al siguiente nivel?</p>
 
-  <footer class="site-footer py-4">
-    <div class="container text-center">
-      <small class="text-muted">© 2025 Derechos reservados.</small>
+      <div class="contact-methods mb-5">
+        <a href="" target="_blank" class="contact-btn instagram"><i class="fab fa-instagram"></i>  Asesoria en Instagram</a>
+        <!-- <a href="mailto:contacto@lmcodecraft.com" class="contact-btn email"> <i class="fas fa-envelope"> </i> Enviar email</a> -->
+        <a href="https://wa.me/573024320955?text=Hola,%20me%20interesa%20solicitar%20una%20asesor%C3%ADa" target="_blank" class="contact-btn whatsapp"><i class="fab fa-whatsapp"></i>  Asesoria en Whatsapp</a>
+      </div>
+
     </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+  <div class="container">
+    <!-- Redes sociales -->
+    <div class="social-links mb-3">
+      <a href="https://www.instagram.com/lm_codecraft?igsh=MWN2MnhzeWh6NnI1Mw%3D%3D&utm_source=qr" target="_blank" class="social-icon instagram" aria-label="Instagram">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://github.com/luissm4" target="_blank" class="social-icon github" aria-label="GitHub">
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+
+    <p class="mb-0">&copy; 2025 LM CodeCraft. Todos los derechos reservados.</p>
+  </div>
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>
-
