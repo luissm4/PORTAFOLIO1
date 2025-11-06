@@ -1,70 +1,104 @@
 <!DOCTYPE html>
-<html lang="es" data-bs-theme="dark">
-
+<html lang="es">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>LM CodeCraft — Portafolio</title>
+  <title>LM CodeCraft — Desarrollo Web Profesional</title>
   <link rel="icon" type="image/png" href="img/logos/LM.png">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style/style.css">
 </head>
-
 <body>
+  <!-- Loader -->
+  <div id="loader">
+    <div class="loader-content">
+      <div class="loader-logo">LM CodeCraft</div>
+      <p class="mt-3">Te damos la bienvenido...</p>
+    </div>
+  </div>
+
+  <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
     <div class="container">
-
       <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
-        <img src="img/logos/LM.png" alt="LM Logo" class="brand-logo" width="50" height="50">
-        <strong>LM CodeCraft</strong>
-        <span class="text-muted">/ Desarrollador Web</span>
+        <img src="img/logos/LM.png" alt="LM" width="28" height="28" class="rounded"> LM CodeCraft
       </a>
-
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Menú">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
         <span class="navbar-toggler-icon"></span>
       </button>
-
-      <div id="mainNav" class="collapse navbar-collapse">
+      <div id="nav" class="collapse navbar-collapse">
         <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link active" href="index.html">Inicio</a></li>
-          <li class="nav-item"><a class="nav-link" href="sobre-mi.html">Sobre mí</a></li>
+          <li class="nav-item"><a class="nav-link" href="#sobre-mi">Sobre mí</a></li>
+          <li class="nav-item"><a class="nav-link" href="proyectos.html">Proyectos</a></li>
           <li class="nav-item"><a class="nav-link" href="servicios.html">Servicios</a></li>
+          <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
         </ul>
       </div>
     </div>
   </nav>
 
-  <header class="hero">
-    <div class="container section-pad">
-      <div class="row align-items-center gy-4">
-        <div class="col-lg-7">
-          <h1 class="display-5 fw-bold mb-3">Tu visión, mi código: hago realidad tu proyecto web.</h1>
-          <p class="lead text-muted mb-4">Soy <strong>Luis</strong>, desarrollador web especializado en crear sitios rápidos, funcionales y visualmente atractivos. Transformo ideas en experiencias digitales que conectan con las personas.</p>
-          <div class="mb-4">
-            <span class="badge text-bg-primary me-1">HTML</span>
-            <span class="badge text-bg-primary me-1">CSS</span>
-            <span class="badge text-bg-primary me-1">JavaScript</span>
-            <span class="badge text-bg-primary me-1">Python</span>
-            <span class="badge text-bg-primary">Django</span>
+  <!-- Hero -->
+  <section id="inicio" class="hero">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-8 hero-content">
+          <h1>LM CodeCraft</h1>
+          <p class="hero-tagline">👉 Tu visión, mi código: hago realidad tu proyecto web.</p>
+          <div class="cta-buttons">
+            <a href="proyectos.html" class="btn btn-primary-custom">Ver proyectos</a>
+            <a href="contacto.html" class="btn btn-outline-custom">Solicita tu web</a>
           </div>
-          <div class="btn-group btn-group-lg">
-            <a class="btn btn-light btn-lg" href="contacto.html">Ven Hablemos</a>
-            <a class="btn btn-light btn-lg" href="proyectos.html">Ver Proyectos</a>
-          </div>
-        </div>
-        <div class="col-lg-5">
-          <img src="img/logos/LMCC.jpg" class="img-fluid rounded-3" alt="code">
         </div>
       </div>
     </div>
-  </header>
+  </section>
 
-  <footer class="site-footer py-4">
-    <div class="container text-center">
-      <small class="text-muted">© 2025 Derechos reservados.</small>
+  <!-- Sobre mí -->
+  <section id="sobre-mi">
+    <div class="container">
+      <h2 class="section-title">👨‍💻 Sobre Mí</h2>
+      <div class="about-content">
+        <img src="img/logos/myself.jpg" alt="Luis — Desarrollador web" class="about-image object-fit-cover">
+        <div class="flex-grow-1">
+          <h3 class="mb-4">Soy Luis, desarrollador web orientado a resultados.</h3>
+          <p class="lead">Creo soluciones funcionales, seguras y escalables que impulsan negocios y marcas.</p>
+          <p>Full-stack con enfoque en rendimiento y mantenibilidad para una buena experiencia de usuario. Llevo ideas a productos digitales de alto impacto.</p>
+          <div class="tech-stack">
+            <span class="tech-item"><i class="fab fa-html5"></i> HTML/CSS</span>
+            <span class="tech-item"><i class="fab fa-js"></i> JavaScript</span>
+            <span class="tech-item"><i class="fab fa-bootstrap"></i> Bootstrap</span>
+            <span class="tech-item"><i class="fab fa-python"></i> Python</span>
+            <span class="tech-item"><i class="fas fa-code"></i> Django</span>
+            <span class="tech-item"><i class="fas fa-hashtag"></i> C#</span>
+            <span class="tech-item"><i class="fas fa-fire"></i> Blazor</span>
+            <span class="tech-item"><i class="fas fa-database"></i> MySQL</span>
+            <span class="tech-item"><i class="fas fa-database"></i> SQLite</span>
+          </div>
+        </div>
+      </div>
     </div>
-  </footer>
+  </section>
+
+  <!-- Footer -->
+ <footer>
+  <div class="container">
+    <!-- Redes sociales -->
+    <div class="social-links mb-3">
+      <a href="https://www.instagram.com/lm_codecraft?igsh=MWN2MnhzeWh6NnI1Mw%3D%3D&utm_source=qr" target="_blank" class="social-icon instagram" aria-label="Instagram">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://github.com/luissm4" target="_blank" class="social-icon github" aria-label="GitHub">
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+
+    <p class="mb-0">&copy; 2025 LM CodeCraft. Todos los derechos reservados.</p>
+  </div>
+ </footer>
+
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>
