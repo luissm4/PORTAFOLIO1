@@ -1,106 +1,93 @@
 <!DOCTYPE html>
-<html lang="es" data-bs-theme="dark">
+<html lang="es">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Servicios — LM CodeCraft</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>LM CodeCraft — Servicios</title>
   <link rel="icon" type="image/png" href="img/logos/LM.png">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-
-  <link rel="stylesheet" href="style.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style/style.css">
 </head>
 <body>
+  <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
     <div class="container">
       <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
-        <img src="img/logos/LM.png" alt="LM Logo" class="brand-logo" width="50" height="50">
-        <strong>LM CodeCraft</strong>
+        <img src="img/logos/LM.png" alt="LM" width="28" height="28" class="rounded"> LM CodeCraft
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div id="nav" class="collapse navbar-collapse">
         <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
-          <li class="nav-item"><a class="nav-link" href="sobre-mi.html">Sobre mí</a></li>
-          <li class="nav-item"><a class="nav-link active" href="servicios.html">Servicios</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html">Volver</a></li>
+          <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
         </ul>
       </div>
     </div>
   </nav>
 
-<main class="container section-pad text-center">
-  <h1 class="mb-4">Servicios</h1>
-  <div class="row g-4">
-
-    <!-- Landing Page -->
-    <div class="col-md-4">
-      <div class="card bg-surface h-100 shadow-sm">
-        <div class="card-body">
-          <i class="bi bi-laptop fs-1 text-primary mb-3"></i>
-          <h5 class="card-title">Landing Page Simple</h5>
-          <p class="card-text text-muted">Diseño moderno, rápido y enfocado en resultados.</p>
+  <!-- Servicios -->
+  <section id="servicios">
+    <div class="container">
+      <h2 class="section-title">🚀 Servicios</h2>
+      <div class="row g-4">
+        <div class="col-lg-3 col-md-6">
+          <div class="service-card">
+            <div class="service-icon"><i class="fas fa-rocket"></i></div>
+            <h3 class="service-title">Landing Page</h3>
+            <p>Páginas enfocadas en conversión y captación de leads.</p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="service-card">
+            <div class="service-icon"><i class="fas fa-building"></i></div>
+            <h3 class="service-title">Web Corporativa</h3>
+            <p>Sitios profesionales que proyectan autoridad y generan confianza.</p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="service-card">
+            <div class="service-icon"><i class="fas fa-store"></i></div>
+            <h3 class="service-title">Tienda Online</h3>
+            <p>Configuración de catálogo, pagos y diseño adaptable..</p>
+          </div>
+        </div>
+        
+        <div class="col-lg-3 col-md-6">
+          <div class="service-card">
+            <div class="service-icon"><i class="fas fa-tools"></i></div>
+            <h3 class="service-title">Mantenimiento & Optimización</h3>
+            <p>Actualizaciones, seguridad y rendimiento continuo.</p>
+          </div>
         </div>
       </div>
-    </div>
 
-    <!-- Web corporativa -->
-    <div class="col-md-4">
-      <div class="card bg-surface h-100 shadow-sm">
-        <div class="card-body">
-          <i class="bi bi-building fs-1 text-primary mb-3"></i>
-          <h5 class="card-title">Web Corporativa</h5>
-          <p class="card-text text-muted">Sitios estructurados y profesionales para empresas.</p>
-        </div>
+      <div class="text-center mt-5">
+        <a href="contacto.html" class="btn btn-primary-custom">Solicitar cotización</a>
       </div>
     </div>
+  </section>
 
-    <!-- Tienda online -->
-    <div class="col-md-4">
-      <div class="card bg-surface h-100 shadow-sm">
-        <div class="card-body">
-          <i class="bi bi-cart4 fs-1 text-primary mb-3"></i>
-          <h5 class="card-title">Tienda Online Básica</h5>
-          <p class="card-text text-muted">Configuración de catálogo, pagos y diseño adaptable.</p>
-        </div>
-      </div>
+  <!-- Footer -->
+  <footer>
+  <div class="container">
+    <!-- Redes sociales -->
+    <div class="social-links mb-3">
+      <a href="https://www.instagram.com/lm_codecraft?igsh=MWN2MnhzeWh6NnI1Mw%3D%3D&utm_source=qr" target="_blank" class="social-icon instagram" aria-label="Instagram">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://github.com/luissm4" target="_blank" class="social-icon github" aria-label="GitHub">
+        <i class="fab fa-github"></i>
+      </a>
     </div>
 
-    <!-- Mantenimiento mensual -->
-    <div class="col-md-4">
-      <div class="card bg-surface h-100 shadow-sm">
-        <div class="card-body">
-          <i class="bi bi-gear-wide-connected fs-1 text-primary mb-3"></i>
-          <h5 class="card-title">Mantenimiento</h5>
-          <p class="card-text text-muted">Actualizaciones, soporte técnico y optimización básica.</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- Correcciones pequeñas -->
-    <div class="col-md-4">
-      <div class="card bg-surface h-100 shadow-sm">
-        <div class="card-body">
-          <i class="bi bi-tools fs-1 text-primary mb-3"></i>
-          <h5 class="card-title">Corrección Puntual o Pequeña</h5>
-          <p class="card-text text-muted">Arreglos rápidos o ajustes de diseño y contenido.</p>
-        </div>
-      </div>
-    </div>
-
+    <p class="mb-0">&copy; 2025 LM CodeCraft. Todos los derechos reservados.</p>
   </div>
-</main>
-
-
-  <footer class="site-footer py-4">
-    <div class="container text-center">
-      <small class="text-muted">© 2025 Derechos reservados.</small>
-    </div>
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>
-
-
