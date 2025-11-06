@@ -1,59 +1,175 @@
-:root {
-  --brand-bg: #0e1116;
-  --brand-surface: #141a22;
-  --brand-text: #eaeef2;
-  --brand-muted: #9aa6b2;
-  --brand-primary: #4db8ff;
-  --brand-primary-contrast: #001421;
-
-  --bs-body-bg: var(--brand-bg);
-  --bs-body-color: var(--brand-text);
-  --bs-emphasis-color: #fff;
-  --bs-secondary-color: var(--brand-muted);
-  --bs-link-color: var(--brand-primary);
-  --bs-link-hover-color: #2b9be6;
-  --bs-border-color: #243242;
-  --bs-primary: var(--brand-primary);
+/*  Variables  */
+:root{
+  --primary-color:#2563eb;
+  --secondary-color:#1e40af;
+  --dark-bg:#0f172a;
+  --light-bg:#f8fafc;
+  --accent:#3b82f6;
 }
 
-html, body { background-color: var(--brand-bg); color: var(--brand-text); }
-.section-pad { padding: 4rem 0; }
-.text-muted { color: var(--brand-muted) !important; }
+/* Reset & Base*/
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;overflow-x:hidden}
 
-.navbar {
-  background: var(--brand-surface) !important;
-  border-bottom: 1px solid var(--bs-border-color);
-}
-.navbar-brand strong { color: #fff; }
-.navbar .nav-link { color: var(--brand-text); opacity: .85; }
-.navbar .nav-link:hover,
-.navbar .nav-link.active { opacity: 1; color: var(--brand-primary); }
+/*  Navbar */
+.navbar{background:rgba(15,23,42,.95)!important;backdrop-filter:blur(10px);transition:all .3s ease}
+.navbar-brand{font-size:1.5rem;font-weight:700;color:var(--accent)!important}
+.nav-link{color:#fff!important;margin:0 12px;transition:color .3s ease}
+.nav-link:hover,.nav-link.active{color:var(--accent)!important}
 
-.hero {
-  background: linear-gradient(180deg, rgba(77,184,255,.08), transparent 60%);
-  border-bottom: 1px solid var(--bs-border-color);
+/*  Loader  */
+#loader{position:fixed;inset:0;background:var(--dark-bg);display:flex;justify-content:center;align-items:center;z-index:9999;transition:opacity .5s ease}
+.loader-content{text-align:center;color:#fff}
+.loader-logo{font-size:3rem;font-weight:800;animation:fadeInUp 1s ease}
+@keyframes fadeInUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
+
+/* Hero */
+.hero{background:linear-gradient(135deg,var(--dark-bg) 0%,var(--secondary-color) 100%);min-height:100vh;display:flex;align-items:center;color:#fff;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;width:500px;height:500px;background:var(--accent);border-radius:50%;filter:blur(150px);opacity:.2;top:-100px;right:-100px}
+.hero-content{position:relative;z-index:2}
+.hero h1{font-size:3.5rem;font-weight:700;margin-bottom:20px;animation:fadeInUp .8s ease}
+.hero-tagline{font-size:1.5rem;margin-bottom:30px;opacity:.9;animation:fadeInUp 1s ease}
+.cta-buttons{animation:fadeInUp 1.2s ease}
+
+/*  Botones CTA  */
+.btn-primary-custom{background:var(--accent);border:none;padding:14px 34px;font-size:1.05rem;border-radius:50px;transition:all .3s ease;margin-right:12px}
+.btn-primary-custom:hover{background:var(--primary-color);transform:translateY(-3px);box-shadow:0 10px 30px rgba(37,99,235,.4)}
+.btn-outline-custom{border:2px solid #fff;color:#fff;padding:14px 34px;font-size:1.05rem;border-radius:50px;background:transparent;transition:all .3s ease}
+.btn-outline-custom:hover{background:#fff;color:var(--dark-bg);transform:translateY(-3px)}
+
+/* Secciones (espaciado general) */
+section{padding:100px 0}
+.section-title{font-size:2.5rem;font-weight:700;margin-bottom:50px;text-align:center}
+
+/* Proyectos (cards y media)*/
+#proyectos{background:var(--light-bg)}
+.project-card{background:#fff;border-radius:15px;overflow:hidden;box-shadow:0 5px 20px rgba(0,0,0,.1);transition:all .3s ease;margin-bottom:30px}
+.project-card:hover{transform:translateY(-10px);box-shadow:0 15px 40px rgba(0,0,0,.18)}
+.project-img{width:100%;height:250px;object-fit:cover;background:linear-gradient(135deg,var(--accent),var(--secondary-color));display:flex;align-items:center;justify-content:center;color:#fff;font-size:3rem}
+.project-content{padding:24px}
+.project-title{font-size:1.5rem;font-weight:600;margin-bottom:12px;color:var(--dark-bg)}
+.project-stack{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.stack-badge{background:var(--light-bg);color:var(--secondary-color);padding:5px 14px;border-radius:20px;font-size:.85rem;font-weight:500}
+.project-result{background:#dcfce7;color:#166534;padding:10px 14px;border-radius:8px;margin:12px 0;font-weight:600}
+
+/*  Ajuste para que la imagen llene el bloque  */
+.project-img {
+  width: 100%;
+  height: 180px; 
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 15px;
+  background: none;
+}
+.project-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  object-position: center; 
+  transition: transform 0.4s ease;
+}
+.project-img img:hover { transform: scale(1.05); }
+
+/* Sobre mí */
+#sobre-mi{background:#fff}
+.about-content{display:flex;align-items:center;gap:50px}
+.about-image{width:300px;height:300px;border-radius:50%;background:linear-gradient(135deg,var(--accent),var(--secondary-color));display:flex;align-items:center;justify-content:center;color:#fff;font-size:5rem;box-shadow:0 10px 40px rgba(37,99,235,.3)}
+.tech-stack{display:flex;flex-wrap:wrap;gap:15px;margin-top:24px}
+.tech-item{background:var(--light-bg);padding:10px 20px;border-radius:10px;font-weight:600;border:2px solid var(--accent);color:var(--secondary-color)}
+
+/* Servicios*/
+#servicios{background:var(--dark-bg);color:#fff}
+.service-card{background:rgba(255,255,255,.05);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.1);border-radius:15px;padding:40px;text-align:center;transition:all .3s ease;height:100%}
+.service-card:hover{background:rgba(255,255,255,.1);transform:translateY(-10px)}
+.service-icon{font-size:3rem;color:var(--accent);margin-bottom:16px}
+.service-title{font-size:1.4rem;font-weight:700;margin-bottom:10px}
+
+/* Testimonios*/
+#testimonios{background:var(--light-bg)}
+.testimonial-card{background:#fff;border-radius:15px;padding:40px;box-shadow:0 5px 20px rgba(0,0,0,.1);position:relative}
+.quote-icon{font-size:3rem;color:var(--accent);opacity:.2;position:absolute;top:20px;left:20px}
+.testimonial-text{font-size:1.1rem;font-style:italic;margin-bottom:20px;position:relative;z-index:2}
+.testimonial-author{font-weight:700;color:var(--secondary-color)}
+
+/*  Contacto (botones y métodos)*/
+#contacto{background:#fff}
+.contact-methods{display:flex;justify-content:center;gap:30px;flex-wrap:wrap}
+.contact-btn{display:inline-flex;align-items:center;gap:10px;padding:20px 40px;border-radius:15px;font-size:1.15rem;font-weight:700;text-decoration:none;transition:all .3s ease}
+.contact-btn.email{background:var(--accent);color:#fff}
+.contact-btn.whatsapp{background:#25d366;color:#fff}
+.contact-btn:hover{transform:translateY(-5px);box-shadow:0 10px 30px rgba(0,0,0,.2);color:#fff}
+
+/* Botón Instagram con degradado oficial */
+.contact-btn.instagram {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 50px;
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+  background: linear-gradient(45deg, 
+    #405DE6,  /* azul */
+    #5B51D8,  /* morado */
+    #833AB4,  /* dark pink */
+    #C13584,  /* purple-red */
+    #E1306C,  /* rojo */
+    #FD1D1D,  /* dark orange */
+    #F56040,  /* naranja */
+    #FCAF45,  /* amarillo */
+    #FFDC80   /* light yellow */
+  );
+  background-size: 300% 300%;
+  transition: background-position 0.4s ease, transform 0.2s ease;
+}
+.contact-btn.instagram:hover {
+  background-position: right center;
+  transform: scale(1.05);
+  color: #fff;
+  text-decoration: none;
 }
 
-.card.bg-surface {
-  background: var(--brand-surface);
-  border-color: var(--bs-border-color);
+/* Botón WhatsApp con degradado verde */
+.contact-btn.whatsapp {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 50px;
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+  background: linear-gradient(45deg,
+    #075E54,  /* verde oscuro clásico */
+    #128C7E,  /* verde medio */
+    #25D366,  /* verde WhatsApp */
+    #DCF8C6   /* verde claro pastel */
+  );
+  background-size: 300% 300%;
+  transition: background-position 0.4s ease, transform 0.2s ease;
+}
+.contact-btn.whatsapp:hover {
+  background-position: right center;
+  transform: scale(1.05);
+  color: #fff;
+  text-decoration: none;
 }
 
-.btn-primary {
-  --bs-btn-bg: var(--brand-primary);
-  --bs-btn-border-color: var(--brand-primary);
-  --bs-btn-hover-bg: #2b9be6;
-  --bs-btn-hover-border-color: #2b9be6;
-  --bs-btn-color: var(--brand-primary-contrast);
+/*Footer*/
+footer{background:var(--dark-bg);color:#fff;padding:30px 0;text-align:center}
+footer .social-links {display:flex;justify-content:center;gap:1rem;}
+footer .social-icon {
+  font-size:1.3rem;width:42px;height:42px;line-height:42px;border-radius:50%;
+  display:inline-flex;align-items:center;justify-content:center;color:#fff;background:#141a22;transition:all .3s ease;
 }
-.btn-outline-light {
-  --bs-btn-color: var(--brand-text);
-  --bs-btn-border-color: var(--brand-text);
-  --bs-btn-hover-bg: var(--brand-text);
-  --bs-btn-hover-color: #000;
-}
+footer .social-icon:hover {transform:translateY(-3px);}
+footer .social-icon.instagram:hover {background:linear-gradient(45deg, #833AB4, #E1306C, #FCAF45);}
+footer .social-icon.github:hover {background:#24292e;}
 
-.site-footer {
-  background: var(--brand-surface);
-  border-top: 1px solid var(--bs-border-color);
+/* Responsive */
+@media (max-width:768px){
+  .hero h1{font-size:2.5rem}
+  .hero-tagline{font-size:1.2rem}
+  .about-content{flex-direction:column;text-align:center}
+  .about-image{width:200px;height:200px;font-size:3rem}
+  .contact-methods{flex-direction:column}
 }
